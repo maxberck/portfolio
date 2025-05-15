@@ -29,7 +29,7 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
-        $validate =$request->validate([
+        $validate = $request->validate([
             'name' => 'required|max:20',
             'level' => 'required|max:50',
         ]);

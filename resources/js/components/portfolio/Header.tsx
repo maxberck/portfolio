@@ -1,4 +1,5 @@
 import Waves from './Waves';
+import Threads from './Threads';
 
 function Header({profils}) {
   return (
@@ -6,7 +7,7 @@ function Header({profils}) {
       {/* Première couche: Background avec Waves */}
       
       <div className="absolute inset-0 z-[-1]">
-        <Waves 
+        {/* <Waves 
           lineColor="white"
           backgroundColor="black"
           waveSpeedX={0.02}
@@ -19,7 +20,16 @@ function Header({profils}) {
           maxCursorMove={120}
           xGap={12}
           yGap={36}
-        />
+        /> */}
+        import Threads from './Threads';
+
+        <div style={{ width: '100%', height: '600px', position: 'relative'}}>
+          <Threads
+            amplitude={2}
+            distance={0}
+            enableMouseInteraction={true}
+          />
+        </div>
       </div>
       
       {/* Deuxième couche: Contenu */}

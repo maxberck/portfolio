@@ -21,7 +21,7 @@ class ExperienceController extends Controller
      */
     public function create()
     {
-        return Inertia::render('create');
+        return Inertia::render('Experience/Create');
     }
 
     /**
@@ -36,6 +36,8 @@ class ExperienceController extends Controller
             'end_date' => $request->end_date,
             'description' => $request->description,
         ]);
+
+        return redirect()->route('dashboard')->with('success', 'Experience created successfully');
     }
 
     /**
