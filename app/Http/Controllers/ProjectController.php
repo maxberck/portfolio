@@ -21,7 +21,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return Inertia::render('create');
+        return Inertia::render('Project/Create');
     }
 
     /**
@@ -29,14 +29,21 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $picturePath = null;
+        if ($request->hasFile('picture') && $request->file('picture')->isValid()) {
+            $picturePath = $request->file('picture')->store('project-pictures', 'public');
+        }
+
         Project::create([
             'title' => $request->title,
             'description' => $request->description,
             'linkGithub' => $request->linkGithub,
             'linkDemo' => $request->linkDemo,
+            'picture' => $picturePath
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Skill created successfully');
+        
+        return redirect()->route('dashboard')->with('success', 'Projet créé avec succès');
 
     }
 

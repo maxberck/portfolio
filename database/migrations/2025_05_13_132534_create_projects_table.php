@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             
             $table->string('title', 20);
-            $table->string('description', 500);
+            $table->string('description', 200);
             $table->string('linkGithub');
             $table->string('linkDemo');
+            $table->string('picture')->nullable();
             $table->timestamps();
         });
     }

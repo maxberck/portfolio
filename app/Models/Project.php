@@ -11,6 +11,7 @@ class Project extends Model
         'description',
         'linkGithub',
         'linkDemo',
+        'picture',
     ];
 
     public function profil()

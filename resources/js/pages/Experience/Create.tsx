@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { router } from '@inertiajs/react'
-import { title } from 'process'
-import { start } from 'repl'
 
 function Create() {
     const [formData, setFormData] = useState({

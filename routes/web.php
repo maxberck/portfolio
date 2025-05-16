@@ -8,16 +8,19 @@ use App\Http\Controllers\ProjectController;
 use App\Models\Profil;
 use App\Models\Skill;
 use App\Models\Experience;
+use App\Models\Project;
 use Inertia\Inertia;
 
 Route::get('/', function () {
     $profils = Profil::all();
     $skills = Skill::all();
     $experiences = Experience::all();
+    $projects = Project::all();
     return Inertia::render('welcome', [
         'profils' => $profils,
         'skills' => $skills,
         'experiences' => $experiences,
+        'projects' => $projects,
     ]);
 })->name('home');
 
