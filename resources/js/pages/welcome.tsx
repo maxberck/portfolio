@@ -8,15 +8,14 @@ function welcome({profils, skills, experiences}) {
   return (
     <>
       <Header profils={profils}></Header>
-      <div className="flex">
+      <section className="flex">
         <div className="w-1/2">
           <Skills skills={skills} />
         </div>
         <div className="w-1/2">
           <Experience experiences={experiences} />
         </div>
-      </div>
-
+      </section>
     </>
   )
 }

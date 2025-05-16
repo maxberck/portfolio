@@ -3,9 +3,7 @@ import Threads from './Threads';
 
 function Header({profils}) {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      {/* Première couche: Background avec Waves */}
-      
+    <div className="relative w-full h-screen overflow-hidden">      
       <div className="absolute inset-0 z-[-1]">
         {/* <Waves 
           lineColor="white"
@@ -21,7 +19,6 @@ function Header({profils}) {
           xGap={12}
           yGap={36}
         /> */}
-        import Threads from './Threads';
 
         <div style={{ width: '100%', height: '600px', position: 'relative'}}>
           <Threads
@@ -30,10 +27,7 @@ function Header({profils}) {
             enableMouseInteraction={true}
           />
         </div>
-      </div>
-      
-      {/* Deuxième couche: Contenu */}
-      
+      </div>      
       {
         profils.map((profil) => (
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/50 w-150 h-50 flex flex-row items-center justify-around z-2 bg-balck/50 shadow-[0_15px_25px_rgba(129,124,124,0.2)] rounded-2xl backdrop-blur p-4 m-4 text-center text-[#18181890]">

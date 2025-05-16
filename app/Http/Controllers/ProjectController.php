@@ -35,6 +35,9 @@ class ProjectController extends Controller
             'linkGithub' => $request->linkGithub,
             'linkDemo' => $request->linkDemo,
         ]);
+
+        return redirect()->route('dashboard')->with('success', 'Skill created successfully');
+
     }
 
     /**
