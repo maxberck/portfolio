@@ -10,19 +10,24 @@ function welcome({profils, skills, experiences, projects}) {
     <>
       <Header profils={profils}></Header>
       <section className="flex">
-        <div className="w-1/2">
+        <div className="w-1/2" id='competences'>
           <h1 className='text-[#FCFCFC] text-center py-10 text-5xl'>Mes Competences</h1>
           <Skills skills={skills} />
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2" id='parcours'>
           <h1 className='text-[#FCFCFC] text-center py-10 text-5xl'>Mon parcours</h1>
           <Experience experiences={experiences} />
         </div>
       </section>
-      <section className='pt-40'>
+      <section className='pt-40' id='projet'>
         <h1 className='text-[#FCFCFC] text-center py-10 text-5xl'>Mes Projets</h1>
         <Project projects={projects}></Project>
       </section>
+      <footer>
+        <div>
+          
+        </div>
+      </footer>
     </>
   )
 }
